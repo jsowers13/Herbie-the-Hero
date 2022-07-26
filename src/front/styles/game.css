@@ -1,0 +1,21 @@
+.hero-box{
+    height: 600px;
+    background-color: cyan;
+    width: 49%;
+    margin-bottom: 200px;
+    
+}
+.monster-box{
+    height: 600px;
+    background-color: yellow;
+    width: 49%;
+    margin-bottom: 200px;
+}
+.rigo-pic{
+    height:100%;
+    
+    
+}
+.monster-pic{
+    height:100%
+}
