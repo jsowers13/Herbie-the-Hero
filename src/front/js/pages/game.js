@@ -73,8 +73,9 @@ export const Game = () => {
       setGameOver(true);
     } else {
       navigate("/");
-    }
+    }  
   }
+  
   var herbieAttack = () => {
     var atkPwr = Math.round(Math.random() * 10 + 1);
     // setMonsterHP(monsterHP - atkPwr);
@@ -166,6 +167,26 @@ export const Game = () => {
     // setHerbieDefending(false);
     herbieDefending = false;
   };
+  if (herbieHP <= 0) {
+    // setHerbieHP(0);
+    herbieHP = 0;
+    if (!gameOver) {
+      alert("Oh No! Herbie has fallen in battle!");
+      setGameOver(true);
+    } else {
+      navigate("/");
+    }  
+  }
+  if (monsterHP <= 0) {
+    // setMonsterHP(0);
+    monsterHP = 0;
+    console.log("MonsterHP = " + monsterHP);
+    if (!finalAttackAvail && monsterHP == 0) {
+      alert("Monster has been defeated! Congratulations Herbie!");
+      navigate("/");
+    } else {
+      partingShot();
+    }}
 
   return (
     <div className="container bg-danger d-flex flex-column align-items-center">
